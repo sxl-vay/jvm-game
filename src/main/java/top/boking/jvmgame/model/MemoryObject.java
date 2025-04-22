@@ -1,4 +1,4 @@
-package com.example.jvmgame.model;
+package top.boking.jvmgame.model;
 
 import lombok.Data;
 import java.util.UUID;

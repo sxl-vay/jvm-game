@@ -1,6 +1,6 @@
-package com.example.jvmgame.service;
+package top.boking.jvmgame.service;
 
-import com.example.jvmgame.model.MemoryObject;
+import top.boking.jvmgame.model.MemoryObject;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,6 +13,11 @@ public class MemoryService {
         MemoryObject obj = new MemoryObject(sizeInKB);
         objectStore.put(obj.getId(), obj);
         return obj.getId();
+    }
+
+    public MemoryObject createNoRefObject(int sizeInKB) {
+        MemoryObject obj = new MemoryObject(sizeInKB);
+        return obj;
     }
     
     public void removeObject(String id) {
